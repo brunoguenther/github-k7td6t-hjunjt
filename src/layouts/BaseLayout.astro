@@ -1,0 +1,38 @@
+---
+import MenuLayout from './MenuLayout.astro'
+import FootLayout from './FootLayout.astro'
+import Logo from '../assets/logo.svg'
+// src/layouts/BaseLayout.astro
+const {title} = Astro.props;
+---
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alex" />
+    <meta name="keywords" content="HTML, CSS, Astro" />
+    <title>Radio IDEO - {title}</title>
+    <style global>
+    @import '../styles/base.css';
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <div id="logo">
+          <!-- Aquí irá el logo -->
+          <a href="/">
+            <img class="logo" src={Logo} />
+          </a>
+        </div>
+        <MenuLayout></MenuLayout>        
+      </div>
+    </div> <!-- header -->
+    <!-- ======= Bloque de página ======= -->
+    <div class="main">      
+      <slot />
+    </div>
+    <!-- ======== Pie de página ========= -->
+    <FootLayout></FootLayout>
+  </body>
+</html>
+</html>

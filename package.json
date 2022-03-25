@@ -1,0 +1,17 @@
+{
+  "name": "@ideo/aiarte",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.24.3"
+  },
+  "dependencies": {
+    "airtable": "^0.11.2"
+  }
+}
